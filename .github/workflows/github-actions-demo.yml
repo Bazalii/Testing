@@ -16,4 +16,4 @@ jobs:
           architecture: x64
       - name: Build and testing with Maven
         working-directory: kotiki-java
-	run: mvn --batch-mode --update-snapshots verify
+        run: mvn --batch-mode --update-snapshots verify
