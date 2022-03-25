@@ -1,0 +1,19 @@
+name: Cats CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+          architecture: x64
+      - name: Build and testing with Maven
+        working-directory: kotiki-java
+        run: mvn --batch-mode --update-snapshots verify
