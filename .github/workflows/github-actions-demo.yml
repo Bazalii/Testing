@@ -15,4 +15,6 @@ jobs:
           distribution: 'adopt'
           architecture: x64
       - name: Build and testing with Maven
-        run: mvn --batch-mode --update-snapshots verify
+        run: |
+	  cd /kotiki-java
+	  mvn --batch-mode --update-snapshots verify
