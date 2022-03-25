@@ -16,5 +16,5 @@ jobs:
           architecture: x64
       - name: Build and testing with Maven
         run: |
-	  cd /kotiki-java
+	  cd ./kotiki-java
 	  mvn --batch-mode --update-snapshots verify
